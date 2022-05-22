@@ -2,8 +2,8 @@ import React from 'react';
 
 const NewsLetter = () => {
     return (
-        <div className='grid sm:grid-cols-1 lg:grid-cols-2 bg-base-200 mt-12 p-16 '>
-            <div className='text-left'>
+        <div id='newsletter' className='grid sm:grid-cols-1 lg:grid-cols-2 bg-emerald-300 mt-12 p-16 '>
+            <div className='text-left text-white'>
                 <h1 className=' text-3xl'>JOIN OUR NEWSLETTER</h1>
                 <p>Stay connected to TOOLS HOUSE with important information and promotions.</p>
             </div>

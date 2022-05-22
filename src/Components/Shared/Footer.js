@@ -12,6 +12,7 @@ const Footer = () => {
           <a href='home#services' class="link link-hover">Choose Tools</a>
           <a href='home#reputation' class="link link-hover">Our Reputation</a>
           <a href='home#review' class="link link-hover">Customer Say</a>
+          <a href='home#newsletter' class="link link-hover">Subscribe</a>
         </div>
         <div>
           <span class="footer-title">Company</span>
