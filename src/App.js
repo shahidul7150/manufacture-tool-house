@@ -7,6 +7,7 @@ import Login from "./Components/Pages/Login/Login";
 import Navbar from "./Components/Shared/Navbar";
 import Blogs from "./Components/Pages/Blogs/Blogs";
 import Footer from "./Components/Shared/Footer";
+import Register from "./Components/Pages/Login/Register";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/portfolio" element={<MyPortfolio/>}></Route>
         <Route path="/blogs" element={<Blogs/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
       </Routes>
       <Footer/>
     </div>
