@@ -6,6 +6,7 @@ import Purchase from "./Components/Pages/Purchase/Purchase";
 import Login from "./Components/Pages/Login/Login";
 import Navbar from "./Components/Shared/Navbar";
 import Blogs from "./Components/Pages/Blogs/Blogs";
+import Footer from "./Components/Shared/Footer";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/blogs" element={<Blogs/>}></Route>
         <Route path="/login" element={<Login/>}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }
