@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Social from './Social';
 
 const Register = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-2/5 mx-auto bg-base-200 m-6">
       <div class="card-body ">
@@ -29,7 +31,11 @@ const Register = () => {
           />
 
           <label class="label">
-            <a href="#" class="label-text-alt link link-hover">
+            <a
+              href="#"
+              onClick={() => navigate('/login')}
+              class="label-text-alt link link-hover"
+            >
               Already have an account ? <span>Please login</span>
             </a>
           </label>

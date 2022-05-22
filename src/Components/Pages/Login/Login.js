@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Social from './Social';
 
 const Login = () => {
+
+    const navigate=useNavigate()
   return (
     <div className="w-2/5 mx-auto bg-base-200 m-6">
       <div class="card-body ">
@@ -32,8 +35,8 @@ const Login = () => {
             </a>
           </label>
           <label class="label">
-            <a href="#" class="label-text-alt link link-hover">
-              New tools house? <span>Please Register</span>
+            <a href="#" onClick={()=>navigate('/register')} class="label-text-alt link link-hover">
+              New tools house? <span >Please Register</span>
             </a>
           </label>
         </div>
