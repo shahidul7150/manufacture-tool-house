@@ -11,7 +11,7 @@ const Tool = ({ tool }) => {
             <h3 className=' font-bold text-primary'>Price Unit: {price}</h3>
             <p><small>Minimum Order: {minimum}</small></p>
             <p className='text-secondary'><small>Available Unites:{quantity}</small></p>
-            <button className='btn bg-orange-600 outline-none border-0 mt-2'>book now</button>
+            <button className='btn btn-primary outline-none border-0 mt-2'>book now</button>
             </div>
         </div>
     );
