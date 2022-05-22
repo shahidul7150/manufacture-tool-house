@@ -1,21 +1,23 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import linkedIn from '../../assets/linkedin.svg';
 const Footer = () => {
+    const navigate=useNavigate()
   return (
     <div className="mt-16">
       <footer class="footer p-10 bg-base-200 text-base-content">
         <div>
           <span class="footer-title">Services</span>
-          <a class="link link-hover">Store</a>
-          <a class="link link-hover">Choose Tools</a>
-          <a class="link link-hover">Our Reputation</a>
-          <a class="link link-hover">Customer Say</a>
+          <a href='home#banner' class="link link-hover">Store</a>
+          <a href='home#services' class="link link-hover">Choose Tools</a>
+          <a href='home#reputation' class="link link-hover">Our Reputation</a>
+          <a href='home#review' class="link link-hover">Customer Say</a>
         </div>
         <div>
           <span class="footer-title">Company</span>
           <a class="link link-hover">About us</a>
           <a class="link link-hover">Contact</a>
-          <a class="link link-hover">Blogs</a>
+          <a onClick={()=>navigate('/blogs')} class="link link-hover">Blogs</a>
         </div>
         <div>
           <span class="footer-title">Legal</span>

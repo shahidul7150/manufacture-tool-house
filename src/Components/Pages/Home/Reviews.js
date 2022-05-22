@@ -3,10 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 const Reviews = () => {
   return (
-    <div className="px-12 mt-12">
+    <div id='review' className="px-12 mt-12">
       <h2 className="text-2xl text-center font-bold mb-5">Customers Reviews</h2>
 
-          <Swiper
+      <Swiper
         spaceBetween={50}
         slidesPerView={3}
         onSlideChange={() => console.log('slide change')}
@@ -222,7 +222,6 @@ const Reviews = () => {
             />
           </div>
         </SwiperSlide>
-        
       </Swiper>
     </div>
   );

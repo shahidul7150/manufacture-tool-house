@@ -2,7 +2,7 @@ import React from 'react';
 
 const BusinessSummary = () => {
     return (
-        <div className='text-center my-12 bg-base-200 py-10'>
+        <div id='reputation' className='text-center my-12 bg-base-200 py-10'>
             <h2 className='text-2xl text-primary font-bold'>Business Summary</h2>
             <p className='text-secondary mb-8'>Our Business Summary is the Achievement of our Services.You can get a service from <span className='text-xl font-bold text-success'>TOOLS HOUSE</span> </p>
     <div class="stats stats-vertical lg:stats-horizontal shadow ">
