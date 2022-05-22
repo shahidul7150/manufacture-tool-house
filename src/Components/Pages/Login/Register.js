@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
-} from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -15,8 +12,8 @@ const Register = () => {
     handleSubmit,
   } = useForm();
 
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
 
   let signInError;
 
@@ -39,7 +36,7 @@ const Register = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    signInWithEmailAndPassword(data.email, data.password);
+    createUserWithEmailAndPassword(data.email, data.password);
   };
   return (
     <div className="bg-base-200 lg:w-2/6 mx-auto ">
@@ -63,7 +60,6 @@ const Register = () => {
                     value: true,
                     message: 'Name is Required',
                   },
-                  
                 })}
               />
               <label class="label">
@@ -72,7 +68,6 @@ const Register = () => {
                     {errors.name.message}
                   </span>
                 )}
-               
               </label>
             </div>
             <div class="form-control w-full ">
