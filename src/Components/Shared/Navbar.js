@@ -74,11 +74,11 @@ const Navbar = () => {
                 </ul>
                 
         </div>
-        <div class="navbar-end ">
-                <ul className='menu menu-horizontal'>
+        <div class="hidden lg:flex navbar-end ">
+                <ul className='menu menu-horizontal '>
                     
-                <li >
-                <NavLink to="/login" className=" rounded-lg  ">
+                <li className='' >
+                <NavLink  to="/login" className=" rounded-lg  ">
                   Login
                 </NavLink>
               </li>

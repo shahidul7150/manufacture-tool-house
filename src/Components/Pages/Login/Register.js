@@ -5,7 +5,7 @@ import Social from './Social';
 const Register = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-2/5 mx-auto bg-base-200 m-6">
+    <div className="sm:w-5/5  lg:w-2/5 mx-auto bg-base-200 m-6">
       <div class="card-body ">
         <h2 className="text-xl text-primary mt-4">Please Registration</h2>
         <div class="form-control">
