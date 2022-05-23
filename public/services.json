@@ -4,71 +4,71 @@
         "name":"Coaxial crimp tool for LMR600 cable size",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"100",
+        "minimum":"10",
         "price":250,
-        "quantity":100000
+        "quantity":1200
     },
     {
         "_id":2,
         "name":"Tent Hammer Unbreakable",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"100",
+        "minimum":"3",
         "price":220,
-        "quantity":150000
+        "quantity":150
     },
     {
         "_id":3,
         "name":"RONGPENG Q Series 2-In-1 Nailer/Stapler SF5040Q",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"50",
+        "minimum":"5",
         "price":450,
-        "quantity":50000
+        "quantity":500
     },
     {
         "_id":4,
         "name":"Screwdriver sets, High-performance fastener tools",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"120",
+        "minimum":"12",
         "price":95,
-        "quantity":170000
+        "quantity":1700
     },
     {
         "_id":5,
         "name":"7 Pieces Simple Household Tools, ",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"100",
+        "minimum":"5",
         "price":200,
-        "quantity":100000
+        "quantity":100
     },
     {
         "_id":6,
         "name":"RONGPENG Ga20 Wide Crown Stapler Air Nailer 1013J",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"50",
+        "minimum":"7",
         "price":550,
-        "quantity":30000
+        "quantity":300
     },
     {
         "_id":7,
         "name":"RONGPENG Ga20 Wide Crown Stapler Air Nailer 1013J",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"50",
+        "minimum":"5",
         "price":550,
-        "quantity":30000
+        "quantity":300
     },
     {
         "_id":8,
         "name":"RONGPENG Ga20 Wide Crown Stapler Air Nailer 1013J",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
-        "minimum":"50",
+        "minimum":"5",
         "price":550,
         "quantity":30000
-    },
+    }
 ]
