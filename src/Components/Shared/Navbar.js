@@ -1,10 +1,11 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Navbar = () => {
+
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
@@ -38,15 +39,15 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink to="/purchase" className="rounded-lg ">
                 Purchase
               </NavLink>
-            </li>
+            </li> */}
             <li>
-              <NavLink to="/dashboard" className="rounded-lg ">
+              {user&&<NavLink to="/dashboard" className="rounded-lg ">
                 Dashboard
-              </NavLink>
+              </NavLink>}
             </li>
             <li>
               <NavLink to="/portfolio" className="rounded-lg ">
@@ -79,15 +80,15 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/purchase" className="rounded-lg ">
               Purchase
             </NavLink>
-          </li>
+          </li> */}
           <li>
-            <NavLink to="/dashboard" className="rounded-lg ">
-              Dashboard
-            </NavLink>
+          {user&&<NavLink to="/dashboard" className="rounded-lg ">
+                Dashboard
+              </NavLink>}
           </li>
           <li>
             <NavLink to="/portfolio" className="rounded-lg ">

@@ -1,5 +1,6 @@
 [
-    {   "_id":1,
+    {  
+         "_id":1,
         "name":"Coaxial crimp tool for LMR600 cable size",
         "img":"https://i.ibb.co/1G2dByH/handware-tool-set.png",
         "description":"Tools make your working experience is more than effective when you use manual technology.",
@@ -69,5 +70,5 @@
         "minimum":"50",
         "price":550,
         "quantity":30000
-    }
+    },
 ]
