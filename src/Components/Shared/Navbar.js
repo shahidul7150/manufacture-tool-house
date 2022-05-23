@@ -39,11 +39,6 @@ const Navbar = () => {
                 Home
               </NavLink>
             </li>
-            {/* <li>
-              <NavLink to="/purchase" className="rounded-lg ">
-                Purchase
-              </NavLink>
-            </li> */}
             <li>
               {user&&<NavLink to="/dashboard" className="rounded-lg ">
                 Dashboard
@@ -72,6 +67,24 @@ const Navbar = () => {
         <Link to="/" class="btn btn-ghost normal-case text-xl">
           TOOLS HOUSE
         </Link>
+
+        <label for="my-drawer-2" tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+        {/* <label for="my-drawer-2" class="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal ml-44 gap-x-4">
@@ -80,11 +93,7 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
-          {/* <li>
-            <NavLink to="/purchase" className="rounded-lg ">
-              Purchase
-            </NavLink>
-          </li> */}
+         
          {user&& <li>
           <NavLink to="/dashboard" className="rounded-lg ">
                 Dashboard
@@ -101,6 +110,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
+
       </div>
       <div class="hidden lg:flex navbar-end ">
        

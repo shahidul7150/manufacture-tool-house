@@ -10,7 +10,7 @@ const Banner = () => {
           <div>
             <h1 class="text-5xl font-bold">Make Your Work Accurately Like <br />as a  Professional!</h1>
             <p class="py-6">Tools make your working experience is more than effective when you use manual technology.So do not miss this chance make your working skill for your portfolio. </p>
-            <button onClick={()=>navigate('/purchase')} class="btn btn-primary">store here</button>
+            <button onClick={()=>navigate('/dashboard')} class="btn btn-primary">store here</button>
           </div>
         </div>
       </div>
