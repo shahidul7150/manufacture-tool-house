@@ -85,11 +85,11 @@ const Navbar = () => {
               Purchase
             </NavLink>
           </li> */}
-          <li>
-          {user&&<NavLink to="/dashboard" className="rounded-lg ">
+         {user&& <li>
+          <NavLink to="/dashboard" className="rounded-lg ">
                 Dashboard
-              </NavLink>}
-          </li>
+              </NavLink>
+          </li>}
           <li>
             <NavLink to="/portfolio" className="rounded-lg ">
               My Portfolio

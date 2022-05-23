@@ -6,6 +6,7 @@ const Purchase = () => {
   const [purchase, setPurchase] = useState({});
 
     const [increase, setIncrease] = useState(0);
+
     const [change,setChange]=useState('')
   const increasehandle = () => {
     const count = increase + 1;
@@ -36,7 +37,7 @@ const Purchase = () => {
     <div className="m-14">
       <div class="card lg:card-side bg-base-100 shadow-xl">
         <figure>
-          <img src={purchase.img} alt="Album" />
+          <img className='p-5' src={purchase.img} alt="Album" />
         </figure>
         <div class="card-body justify-center">
           <h2 class="card-title">{purchase.name}</h2>
@@ -64,7 +65,7 @@ const Purchase = () => {
                 <label class="input-group">
                   <button
                     onClick={increasehandle}
-                    className="bg-gray-300 px-5 text-2xl font-bold text-primary"
+                    className="bg-primary px-5 text-2xl font-bold text-white"
                   >
                     +
                   </button>
@@ -72,14 +73,14 @@ const Purchase = () => {
                   {increase < 1 ? (
                     <button
                       disabled
-                      className="bg-gray-300 px-5 text-2xl font-bold text-primary"
+                      className="bg-gray-300 px-5 text-2xl font-bold text-black"
                     >
                       -
                     </button>
                   ) : (
                     <button
                       onClick={decreasehandle}
-                      className="bg-gray-300 px-5 text-2xl font-bold text-primary"
+                      className="bg-primary px-5 text-2xl font-bold text-white"
                     >
                       -
                     </button>
