@@ -10,6 +10,8 @@ import Footer from './Components/Shared/Footer';
 import Register from './Components/Pages/Login/Register';
 import ToolsSection from './Components/Pages/Home/ToolsSection';
 import RequireAuth from './Components/Pages/Login/RequireAuth';
+import MyOrders from './Components/Pages/Dashboard/MyOrders';
+import AddReview from './Components/Pages/Dashboard/AddReview';
 
 function App() {
   return (
@@ -33,7 +35,10 @@ function App() {
               <Dashboard />
             </RequireAuth>
           }
-        ></Route>
+        >
+          <Route index element={<MyOrders/> }/>
+          <Route path='addreview' element={<AddReview/> }/>
+        </Route>
         <Route path="/portfolio" element={<MyPortfolio />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
