@@ -101,19 +101,21 @@ const Purchase = () => {
 
               {/* ====================================== */}
 
-              <div>
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <label class="input-group">
+              {/* <div > */}
+                {/* <div class="input-group"> */}
+                  <div >
+                    <label class=" lg:input-group  ">
                       <span class="btn btn-primary  " type="button" onClick={incNum}>
                         +
                       </span>
+
                       <input
+                      
                         type="text"
                         name="name"
                         value={increase}
                         onChange={handleChange}
-                        class="input input-bordered"
+                        class=" input input-bordered"
                       />
                       <span
                         class="btn  btn-primary"
@@ -124,8 +126,8 @@ const Purchase = () => {
                       </span>
                     </label>
                   </div>
-                </div>
-              </div>
+                {/* </div> */}
+              {/* </div> */}
 
               {/* ------------------------------------------- */}
 
