@@ -19,6 +19,7 @@ const ManageAllOrder = () => {
               <th>Product</th>
               <th>Avatar name</th>
               <th>Paid Status</th>
+              <th></th>
               
             </tr>
           </thead>
@@ -30,6 +31,7 @@ const ManageAllOrder = () => {
                 <td>{order.purchase}</td>
                 <td>{order.avatarName}</td>
                 <td>paid/Pay</td>
+                <td> <button class="btn btn-xs btn-error">Remove</button></td>
 
                
               </tr>
