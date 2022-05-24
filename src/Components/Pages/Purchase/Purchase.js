@@ -61,6 +61,7 @@ const Purchase = () => {
     console.log(purchaseAmount);
     const booking = {
       purchaseId: _id,
+      img,
       purchase: name,
       user: user.email,
       avatarName: user.displayName,

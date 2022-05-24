@@ -15,6 +15,10 @@ import ToolsSection from './Components/Pages/Home/ToolsSection';
 import RequireAuth from './Components/Pages/Login/RequireAuth';
 import MyOrders from './Components/Pages/Dashboard/MyOrders';
 import AddReview from './Components/Pages/Dashboard/AddReview';
+import MyProfile from './Components/Pages/Dashboard/MyProfile';
+import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
+import AddProduct from './Components/Pages/Dashboard/AddProduct';
+import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts';
 
 function App() {
   return (
@@ -40,7 +44,11 @@ function App() {
           }
         >
           <Route index element={<MyOrders />} />
+          <Route path="profile" element={<MyProfile/>} />
           <Route path="addreview" element={<AddReview />} />
+          <Route path="manageorder" element={<ManageAllOrder />} />
+          <Route path="addproduct" element={<AddProduct />} />
+          <Route path="manageproduct" element={<ManageAllProducts />} />
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
