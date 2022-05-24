@@ -14,7 +14,7 @@ const ManageAllProducts = () => {
 
       <div class="overflow-x-auto">
         <table class="table w-full">
-          <thead>
+          <thead >
             <tr>
               <th>S.L</th>
               <th>Image</th>
@@ -22,6 +22,7 @@ const ManageAllProducts = () => {
               <th>Minimum</th>
               <th>Quantity</th>
               <th>Price</th>
+              <th></th>
               <th></th>
             </tr>
           </thead>
@@ -34,7 +35,8 @@ const ManageAllProducts = () => {
                 <td>{tool.minimum}</td>
                 <td>{tool.quantity}</td>
                 <td>{tool.price}</td>
-                <td><button className="btn btn-success">Update</button></td>
+                <td><button className="btn btn-xs btn-success">Update</button></td>
+                <td><button className="btn btn-xs btn-error">Delete</button></td>
               </tr>
             ))}
           </tbody>

@@ -18,6 +18,7 @@ const ManageAllOrder = () => {
               <th>Image</th>
               <th>Product</th>
               <th>Avatar name</th>
+              <th>Paid Status</th>
               
             </tr>
           </thead>
@@ -28,6 +29,8 @@ const ManageAllOrder = () => {
                 <td><img width="36px" src={order.img} alt="" /></td>
                 <td>{order.purchase}</td>
                 <td>{order.avatarName}</td>
+                <td>paid/Pay</td>
+
                
               </tr>
             ))}
