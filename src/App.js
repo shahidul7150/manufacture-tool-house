@@ -1,4 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import Home from './Components/Pages/Home/Home';
 import MyPortfolio from './Components/Pages/MyPortfolio/MyPortfolio';
@@ -36,8 +39,8 @@ function App() {
             </RequireAuth>
           }
         >
-          <Route index element={<MyOrders/> }/>
-          <Route path='addreview' element={<AddReview/> }/>
+          <Route index element={<MyOrders />} />
+          <Route path="addreview" element={<AddReview />} />
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
@@ -46,6 +49,7 @@ function App() {
         <Route path="/service" element={<ToolsSection />}></Route>
       </Routes>
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

@@ -1,27 +1,51 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+import { toast } from 'react-toastify';
 const Purchase = () => {
+  const [user, loading, error] = useAuthState(auth);
   const { purchaseId } = useParams();
   const [purchase, setPurchase] = useState({});
 
-  const [increase, setIncrease] = useState(0);
+  // const [increase, setIncrease] = useState(0);
 
-    const [change, setChange] = useState('');
-    
-    const { name,quantity,img,description,price,minimum } = purchase;
-  const increasehandle = () => {
-    const count = increase + 1;
-    setIncrease(count);
+  // const [change, setChange] = useState('');
+  const { _id, name, quantity, img, description, price, minimum } = purchase;
+
+  // const increasehandle = () => {
+  //   const count = increase + 1;
+  //   setIncrease(count);
+  // };
+  // const decreasehandle = () => {
+  //   const count = increase - 1;
+  //   setIncrease(count);
+  // };
+
+  // const changeValue = (event) => {
+  //   setChange(event.target.value);
+  // };
+
+  // ------------------------------------------
+  let [increase, setIncrease] = useState(0);
+  let incNum = () => {
+    if (increase < quantity) {
+      setIncrease(Number(increase) + 1);
+    }
   };
-  const decreasehandle = () => {
-    const count = increase - 1;
-    setIncrease(count);
+  let decNum = () => {
+    if (increase > 0) {
+      setIncrease(increase - 1);
+    }
   };
 
-  const changeValue = (event) => {
-    setChange(event.target.value);
+  let handleChange = (e) => {
+    setIncrease(e.target.value);
+    console.log(increase);
   };
+  // --------------------------------------
+  const minimumQuantity = quantity - increase;
+
   useEffect(() => {
     const url = `http://localhost:5000/product/${purchaseId}`;
     fetch(url)
@@ -31,10 +55,31 @@ const Purchase = () => {
 
   const formSubmit = (event) => {
     event.preventDefault();
-    const quantitySelect = event.target.amount.value;
-    console.log(quantitySelect);
+    // console.log(purchaseAmount, name, _id);
+    let purchaseAmount = event.target.name.value;
+    // console.log(purchaseAmount, name, _id);
+    console.log(purchaseAmount);
+    const booking = {
+      purchaseId: _id,
+      purchase: name,
+      user: user.email,
+      avatarName: user.displayName,
+      Amount: purchaseAmount,
+    };
+    fetch('http://localhost:5000/booking', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        toast('order completed');
+      });
   };
-  const minimumQuantity = parseInt(quantity) - increase;
+
   return (
     <div className="m-14">
       <div class="card lg:card-side bg-base-100 shadow-xl">
@@ -54,48 +99,35 @@ const Purchase = () => {
                 <span class="label-text">Quantity</span>
               </label>
 
-              {/* <input
-                type="number"
-                placeholder="Type here"
-                class="input input-bordered w-full max-w-xs"
-              /> */}
+              {/* ====================================== */}
 
-              <div class="form-control">
-                <label class="label">
-                  <span class="label-text">Enter amount</span>
-                </label>
-                <label class="input-group">
-                  <button
-                    onClick={increasehandle}
-                    className="bg-primary px-5 text-2xl font-bold text-white"
-                  >
-                    +
-                  </button>
-                  <input
-                    onChange={changeValue}
-                    type="text"
-                    name="amount"
-                    id=""
-                    className="text-center"
-                    value={increase}
-                  />
-                  {increase < 1 ? (
-                    <button
-                      disabled
-                      className="bg-gray-300 px-5 text-2xl font-bold text-black"
-                    >
-                      -
-                    </button>
-                  ) : (
-                    <button
-                      onClick={decreasehandle}
-                      className="bg-primary px-5 text-2xl font-bold text-white"
-                    >
-                      -
-                    </button>
-                  )}
-                </label>
+              <div>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <label class="input-group">
+                      <span class="btn btn-primary  " type="button" onClick={incNum}>
+                        +
+                      </span>
+                      <input
+                        type="text"
+                        name="name"
+                        value={increase}
+                        onChange={handleChange}
+                        class="input input-bordered"
+                      />
+                      <span
+                        class="btn  btn-primary"
+                        type="button"
+                        onClick={decNum}
+                      >
+                        -
+                      </span>
+                    </label>
+                  </div>
+                </div>
               </div>
+
+              {/* ------------------------------------------- */}
 
               <label class="label">
                 <span class="label-text-alt text-primary">
