@@ -5,7 +5,7 @@ const AddReview = () => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    const url = `https://obscure-harbor-94819.herokuapp.com/product`;
+    const url = `https://obscure-harbor-94819.herokuapp.com/review`;
     fetch(url, {
       method: 'POST',
       headers: {
@@ -45,7 +45,7 @@ const AddReview = () => {
           class="input input-bordered w-full max-w-xs"
         />
         {/* ratting start */}
-        <div>
+        {/* <div>
             <h4>Your ratting</h4>
           <div class="rating">
             <input
@@ -75,7 +75,7 @@ const AddReview = () => {
               class="mask mask-star-2 bg-orange-400"
             />
           </div>
-        </div>
+        </div> */}
         {/* ratting end */}
         <input
           className="btn btn-primary  input input-bordered w-full max-w-xs "

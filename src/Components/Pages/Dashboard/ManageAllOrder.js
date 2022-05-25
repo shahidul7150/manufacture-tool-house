@@ -48,7 +48,7 @@ const ManageAllOrder = () => {
                 <td><img width="36px" src={order.img} alt="" /></td>
                 <td>{order.purchase}</td>
                 <td>{order.avatarName}</td>
-                <td>paid/Pay</td>
+                <td>pay</td>
                 <td> <button onClick={() => handleDelete(order._id)} class="btn btn-xs btn-error">Remove</button></td>
 
                

@@ -7,7 +7,7 @@ const MyOrders = () => {
   const [user] = useAuthState(auth);
 
   useEffect(() => {
-    const url = `http://localhost:5000/myBooking?email=${user.email}`;
+    const url = `https://obscure-harbor-94819.herokuapp.com/myBooking?email=${user.email}`;
     console.log(url);
     fetch(url)
       .then((res) => res.json())
