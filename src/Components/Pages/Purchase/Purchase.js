@@ -47,7 +47,7 @@ const Purchase = () => {
   const minimumQuantity = quantity - increase;
 
   useEffect(() => {
-    const url = `http://localhost:5000/product/${purchaseId}`;
+    const url = `https://obscure-harbor-94819.herokuapp.com/product/${purchaseId}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => setPurchase(data));
@@ -63,11 +63,11 @@ const Purchase = () => {
       purchaseId: _id,
       img,
       purchase: name,
-      customer: user.email,
+      email: user.email,
       avatarName: user.displayName,
       Amount: purchaseAmount,
     };
-    fetch('http://localhost:5000/booking', {
+    fetch('https://obscure-harbor-94819.herokuapp.com/booking', {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

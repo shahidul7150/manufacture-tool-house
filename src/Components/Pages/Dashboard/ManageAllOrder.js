@@ -2,10 +2,28 @@ import React, { useEffect, useState } from 'react';
 const ManageAllOrder = () => {
   const [allOrder, setAllOrder] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/booking')
+    fetch('https://obscure-harbor-94819.herokuapp.com/booking')
       .then((res) => res.json())
       .then((data) => setAllOrder(data));
   }, []);
+
+
+  
+  const handleDelete = (id) => {
+
+    const url = `https://obscure-harbor-94819.herokuapp.com/product/${id}`;
+
+    fetch(url, {
+      method:"DELETE",
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const remaining = allOrder.filter((order) => order._id !== id);
+        setAllOrder(remaining);
+      });
+    console.log('Hello');
+  };
   return (
     <div>
       <p>Manage all order :{allOrder.length}</p>
@@ -31,7 +49,7 @@ const ManageAllOrder = () => {
                 <td>{order.purchase}</td>
                 <td>{order.avatarName}</td>
                 <td>paid/Pay</td>
-                <td> <button class="btn btn-xs btn-error">Remove</button></td>
+                <td> <button onClick={() => handleDelete(order._id)} class="btn btn-xs btn-error">Remove</button></td>
 
                
               </tr>

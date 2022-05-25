@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import {  toast } from 'react-toastify';
+
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
 
   const onSubmit = (data) => {
       console.log(data)
-    const url=`http://localhost:5000/product`;
+    const url=`https://obscure-harbor-94819.herokuapp.com/product`;
     fetch(url,{
         method:'POST',
         headers:{

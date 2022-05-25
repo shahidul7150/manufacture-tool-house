@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 const ManageAllProducts = () => {
   const [tools, setTools] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/product')
+    fetch('https://obscure-harbor-94819.herokuapp.com/product')
       .then((res) => res.json())
       .then((data) => setTools(data));
   }, []);
 
   const handleDelete = (id) => {
 
-    const url = `http://localhost:5000/product/${id}`;
+    const url = `https://obscure-harbor-94819.herokuapp.com/product/${id}`;
 
     fetch(url, {
       method:"DELETE",
