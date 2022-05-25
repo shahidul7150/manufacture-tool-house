@@ -63,7 +63,7 @@ const Purchase = () => {
       purchaseId: _id,
       img,
       purchase: name,
-      user: user.email,
+      customer: user.email,
       avatarName: user.displayName,
       Amount: purchaseAmount,
     };
