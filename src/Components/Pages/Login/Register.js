@@ -7,9 +7,10 @@ import {
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../hooks/useToken';
 import Loading from '../../Shared/Loading';
 const Register = () => {
-    const navigate=useNavigate()
+  const navigate = useNavigate();
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const {
     register,
@@ -21,6 +22,8 @@ const Register = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+
+  const [token] = useToken(user || gUser);
   let signInError;
 
   if (loading || gLoading || updating) {
@@ -36,16 +39,16 @@ const Register = () => {
       </p>
     );
   }
-  if (user || gUser) {
-    console.log(user || gUser);
+  if (token) {
+    navigate('/home');
   }
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data,event) => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
-      await updateProfile({ displayName: data.name });
-      console.log("update done")
-      navigate('/home')
+    await updateProfile({ displayName: data.name });
+    console.log('update done');
+    
   };
   return (
     <div className="bg-base-200 lg:w-2/6 mx-auto ">
