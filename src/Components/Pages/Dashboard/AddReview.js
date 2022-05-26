@@ -1,7 +1,32 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+  import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
+import ReactStars from "react-rating-stars-component";
 const AddReview = () => {
+
+// -------------------------
+  
+const rating = {
+  size: 30,
+  color: "gray",
+  activeColor: "red",
+  value: 7.5,
+  a11y: true,
+  isHalf: true,
+  emptyIcon:<FontAwesomeIcon className='text-orange-600' icon={faStar} />  ,
+  filledIcon:<FontAwesomeIcon icon={faStar} />,
+  onChange: newValue => {
+    console.log(`Example 2: new value is ${newValue}`);
+  }
+};
+  
+// -------------------------
+
+
+
+
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     console.log(data);
@@ -44,38 +69,10 @@ const AddReview = () => {
           {...register('img', { required: true })}
           class="input input-bordered w-full max-w-xs"
         />
+        
         {/* ratting start */}
-        {/* <div>
-            <h4>Your ratting</h4>
-          <div class="rating">
-            <input
-              type="radio"
-              name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
-              checked
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
-            />
-            <input
-              type="radio"
-              name="rating-2"
-              class="mask mask-star-2 bg-orange-400"
-            />
-          </div>
-        </div> */}
+<ReactStars  {...register('rating')} {...rating} />
+        
         {/* ratting end */}
         <input
           className="btn btn-primary  input input-bordered w-full max-w-xs "
