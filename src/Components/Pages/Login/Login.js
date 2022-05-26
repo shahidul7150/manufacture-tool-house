@@ -54,12 +54,12 @@ const [token]=useToken(user || gUser)
   return (
     <div className="bg-base-200 lg:w-2/6 mx-auto ">
       <div className="sm:w-5/5  mx-auto bg-base-200 m-6 form-control w-full  ">
-        <div class="card-body ">
+        <div className="card-body ">
           {/* <h2 className="text-xl text-primary mt-4">Quick Login</h2> */}
 
           <button
             onClick={() => signInWithGoogle()}
-            class="btn btn-primary btn-outline"
+            className="btn btn-primary btn-outline"
           >
             <img
               width="24px"
@@ -70,18 +70,18 @@ const [token]=useToken(user || gUser)
             Login with Google
           </button>
 
-          <div class="divider">OR</div>
+          <div className="divider">OR</div>
           <h2 className="text-2xl text-primary mt-4">Please Login</h2>
 
           <form onSubmit={handleSubmit(onSubmit)}>
-            <div class="form-control w-full ">
-              <label class="label">
-                <span class="label-text">Email</span>
+            <div className="form-control w-full ">
+              <label className="label">
+                <span className="label-text">Email</span>
               </label>
               <input
                 type="email"
                 placeholder="Your Email"
-                class="input input-bordered w-full "
+                className="input input-bordered w-full "
                 {...register('email', {
                   required: {
                     value: true,
@@ -93,27 +93,27 @@ const [token]=useToken(user || gUser)
                   },
                 })}
               />
-              <label class="label">
+              <label className="label">
                 {errors.email?.type === 'required' && (
-                  <span class="label-text-alt text-red-500">
+                  <span className="label-text-alt text-red-500">
                     {errors.email.message}
                   </span>
                 )}
                 {errors.email?.type === 'pattern' && (
-                  <span class="label-text-alt text-red-500">
+                  <span className="label-text-alt text-red-500">
                     {errors.email.message}
                   </span>
                 )}
               </label>
             </div>
-            <div class="form-control w-full ">
-              <label class="label">
-                <span class="label-text">Password</span>
+            <div className="form-control w-full ">
+              <label className="label">
+                <span className="label-text">Password</span>
               </label>
               <input
                 type="password"
                 placeholder="Your Password"
-                class="input input-bordered w-full "
+                className="input input-bordered w-full "
                 {...register('password', {
                   required: {
                     value: true,
@@ -125,14 +125,14 @@ const [token]=useToken(user || gUser)
                   },
                 })}
               />
-              <label class="label">
+              <label className="label">
                 {errors.password?.type === 'required' && (
-                  <span class="label-text-alt text-red-500">
+                  <span className="label-text-alt text-red-500">
                     {errors.password.message}
                   </span>
                 )}
                 {errors.password?.type === 'minLength' && (
-                  <span class="label-text-alt text-red-500">
+                  <span className="label-text-alt text-red-500">
                     {errors.password.message}
                   </span>
                 )}

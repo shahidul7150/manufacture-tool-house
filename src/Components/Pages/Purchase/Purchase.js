@@ -83,30 +83,30 @@ const Purchase = () => {
 
   return (
     <div className="m-14">
-      <div class="card lg:card-side bg-base-100 shadow-xl">
+      <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
           <img className="p-5" src={img} alt="Album" />
         </figure>
-        <div class="card-body justify-center">
-          <h2 class="card-title">{name}</h2>
+        <div className="card-body justify-center">
+          <h2 className="card-title">{name}</h2>
           <p className="flex-grow-0">{description}</p>
           <p className="flex-grow-0 font-bold text-primary">
             Per Unit: {price} USD
           </p>
           {/* input      */}
           <form onSubmit={formSubmit}>
-            <div class="form-control w-full max-w-xs">
-              <label class="label">
-                <span class="label-text">Quantity</span>
+            <div className="form-control w-full max-w-xs">
+              <label className="label">
+                <span className="label-text">Quantity</span>
               </label>
 
               {/* ====================================== */}
 
               {/* <div > */}
-                {/* <div class="input-group"> */}
+                {/* <div className="input-group"> */}
                   <div >
-                    <label class=" lg:input-group  ">
-                      <span class="btn btn-primary  " type="button" onClick={incNum}>
+                    <label className=" lg:input-group  ">
+                      <span className="btn btn-primary  " type="button" onClick={incNum}>
                         +
                       </span>
 
@@ -116,10 +116,10 @@ const Purchase = () => {
                         name="name"
                         value={increase}
                         onChange={handleChange}
-                        class=" input input-bordered"
+                        className=" input input-bordered"
                       />
                       <span
-                        class="btn  btn-primary"
+                        className="btn  btn-primary"
                         type="button"
                         onClick={decNum}
                       >
@@ -132,29 +132,29 @@ const Purchase = () => {
 
               {/* ------------------------------------------- */}
 
-              <label class="label">
-                <span class="label-text-alt text-primary">
+              <label className="label">
+                <span className="label-text-alt text-primary">
                   Minimum {minimum} order
                 </span>
               </label>
-              <label class="label">
-                <span class="label-text text-lime-600">
+              <label className="label">
+                <span className="label-text text-lime-600">
                   Available Now: {minimumQuantity}
                 </span>
               </label>
             </div>
             {/* input end */}
-            <div class="card-actions justify-start">
+            <div className="card-actions justify-start">
               {increase < minimum ? (
                 <input
                   disabled
-                  class="btn  btn-primary"
+                  className="btn  btn-primary"
                   type="submit"
                   value="Add Purchase"
                 />
               ) : (
                 <input
-                  class="btn  btn-primary"
+                  className="btn  btn-primary"
                   type="submit"
                   value="Add Purchase"
                 />

@@ -28,8 +28,8 @@ const ManageAllOrder = () => {
     <div>
       <p>Manage all order :{allOrder.length}</p>
 
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>S.L</th>
@@ -43,13 +43,13 @@ const ManageAllOrder = () => {
           </thead>
           <tbody>
             {allOrder.map((order,index) => (
-              <tr>
+              <tr key={index}>
                 <th>{index+1}</th>
                 <td><img width="36px" src={order.img} alt="" /></td>
                 <td>{order.purchase}</td>
                 <td>{order.avatarName}</td>
                 <td>pay</td>
-                <td> <button onClick={() => handleDelete(order._id)} class="btn btn-xs btn-error">Remove</button></td>
+                <td> <button onClick={() => handleDelete(order._id)} className="btn btn-xs btn-error">Remove</button></td>
 
                
               </tr>

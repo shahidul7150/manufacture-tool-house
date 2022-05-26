@@ -3,30 +3,30 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   return (
-    <div class="drawer drawer-mobile">
-      <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content px-4  ">
-        <div class="flex justify-between">
+    <div className="drawer drawer-mobile">
+      <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content px-4  ">
+        <div className="flex justify-between">
           <h2 className="text-3xl text-primary">Dashboard</h2>
 {/* -------------------------------- */}
 
 {/* ------------------------ */}
           <label
-            for="my-drawer-2"
-            tabindex="0"
-            class="btn btn-ghost lg:hidden text-right"
+            htmlFor="my-drawer-2"
+            tabIndex="0"
+            className="btn btn-ghost lg:hidden text-right"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
+              className="h-5 w-5"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h8m-8 6h16"
               />
             </svg>
@@ -35,9 +35,9 @@ const Dashboard = () => {
 
         <Outlet></Outlet>
       </div>
-      <div class="drawer-side shadow-xl  ">
-        <label for="my-drawer-2" class="drawer-overlay"></label>
-        <ul class="menu p-4 overflow-y-auto w-80  text-base-content bg-base-100">
+      <div className="drawer-side shadow-xl  ">
+        <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+        <ul className="menu p-4 overflow-y-auto w-80  text-base-content bg-base-100">
           {/* <!-- Sidebar content here --> */}
           <li>
             <Link to="/dashboard">My Orders</Link>

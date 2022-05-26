@@ -2,19 +2,19 @@ import React from 'react';
 
 const Blogs = () => {
   return (
-    <div class="px-12">
-      <p class="uppercase pl-12 text-2xl font-bold w-3/5 p-5 bg-green-600  mt-5 text-white">
+    <div className="px-12">
+      <p className="uppercase pl-12 text-2xl font-bold w-3/5 p-5 bg-green-600  mt-5 text-white">
         Welcome to our blog portal
       </p>
 
-      <div class=" mt-5  ">
+      <div className=" mt-5  ">
         <img
-          class="w-3/5  "
+          className="w-3/5  "
           src="https://res.cloudinary.com/proxify-io/image/upload/c_fill,f_auto,q_auto,w_1440,h_600/v1/cms/images/articles/0S2oGmon8xrcPwq6heTRyh3DayYVh6e2ftTjGuDA.jpg"
           alt=""
         />
 
-        <h3 class="text-2xl py-3">
+        <h3 className="text-2xl py-3">
           Q:1 How will you improve the performance of a React Application?
         </h3>
         <p>
@@ -31,14 +31,14 @@ const Blogs = () => {
           So in this way you can improve your react code performance.
         </p>
       </div>
-      <div class=" mt-5  ">
+      <div className=" mt-5  ">
         <img
-          class="w-3/5  "
+          className="w-3/5  "
           src="https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/690102/retina_1708x683_image_0-1967657e3078be54d78ccc4d57eae106-f763757d0bd43e58ff9976083b458547.png"
           alt=""
         />
 
-        <h3 class="text-2xl py-3">
+        <h3 className="text-2xl py-3">
           Q:2 What are the different ways to manage a state in a React
           application?
         </h3>
@@ -53,14 +53,14 @@ const Blogs = () => {
           </ul>
         </p>
       </div>
-      <div class=" mt-5  ">
+      <div className=" mt-5  ">
         <img
-          class="w-3/5  "
+          className="w-3/5  "
           src="https://cdn-media-1.freecodecamp.org/images/1*cR8HEE-toHzj9rXVXbJ_ng.png"
           alt=""
         />
 
-        <h3 class="text-2xl py-3">
+        <h3 className="text-2xl py-3">
           Q:3 How does prototypical inheritance work?{' '}
         </h3>
         <p>
@@ -74,14 +74,14 @@ const Blogs = () => {
           constructor's prototype.
         </p>
       </div>
-      <div class=" mt-5  ">
+      <div className=" mt-5  ">
         <img
-          class="w-3/5  "
+          className="w-3/5  "
           src="https://paper-attachments.dropbox.com/s_EAEEAE9063B0CA7CBC6574F36123E82B36B6C1EC3724A86DA7C0B4C67C2DD652_1645380076460_explaining+useeffect+local+storage.jpg"
           alt=""
         />
 
-        <h3 class="text-2xl py-3">
+        <h3 className="text-2xl py-3">
           Q:4 Why you do not set the state directly in React. For example, if
           you have const [products, setProducts] = useState([]). Why you do not
           set products = [...] instead, you use the setProducts{' '}
@@ -93,14 +93,14 @@ const Blogs = () => {
           product set another palace setProduct help you to show your data.
         </p>
       </div>
-      <div class=" mt-5  ">
+      <div className=" mt-5  ">
         <img
-          class="w-3/5  "
+          className="w-3/5  "
           src="https://ucarecdn.com/39483ff6-4269-400d-bca7-1dd059c31c02/"
           alt=""
         />
 
-        <h3 class="text-2xl py-3">
+        <h3 className="text-2xl py-3">
           Q:5 What is a unit test? Why should write unit tests?{' '}
         </h3>
         <p>

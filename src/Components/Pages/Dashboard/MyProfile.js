@@ -3,7 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 
 const MyProfile = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user ] = useAuthState(auth);
     console.log(user.photoURL);
     return (
         <div>

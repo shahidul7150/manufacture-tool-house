@@ -22,8 +22,8 @@ const AddProduct = () => {
     })
     };
   return (
-    <div class="w-2/4 mx-auto mt-3">
-      <h2 class="mb-3">Please add a product</h2>
+    <div className="w-2/4 mx-auto mt-3">
+      <h2 className="mb-3">Please add a product</h2>
 
       <form
         className=" flex flex-col gap-y-3"
@@ -32,36 +32,36 @@ const AddProduct = () => {
         <input
           placeholder="Product name"
           {...register('name', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
         <textarea
           placeholder="Description"
           {...register('description', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
         <input
           placeholder="Price per unit"
           type="number"
           {...register('price', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
         <input
           placeholder="Total quantity"
           type="number"
           {...register('quantity', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
         <input
           placeholder="Minimum order"
           type="number"
           {...register('minimum', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
         <input
           placeholder="Photo url"
           type="text"
           {...register('img', { required: true })}
-          class="input input-bordered w-full max-w-xs"
+          className="input input-bordered w-full max-w-xs"
         />
 
         <input

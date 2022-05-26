@@ -11,8 +11,8 @@ const AllUser = () => {
     <div>
       {allUser.length}
 
-      <div class="overflow-x-auto">
-        <table class="table w-full">
+      <div className="overflow-x-auto">
+        <table className="table w-full">
           <thead>
             <tr>
               <th>SL</th>
@@ -23,7 +23,7 @@ const AllUser = () => {
           </thead>
           <tbody>
             {allUser.map((user, index) => (
-              <tr>
+              <tr key={index}>
                 <th>{index + 1}</th>
                 <td>{user.email}</td>
                     <td>

@@ -22,8 +22,8 @@ const MyOrders = () => {
       <h1>
         Order
         {booking.length}
-        <div class="overflow-x-auto">
-          <table class="table w-full">
+        <div className="overflow-x-auto">
+          <table className="table w-full">
             <thead>
               <tr>
                 <th></th>
@@ -33,14 +33,14 @@ const MyOrders = () => {
               </tr>
             </thead>
             <tbody>
-              {booking.map((book) => (
-                <tr>
+              {booking.map((book,index) => (
+                <tr key={index}>
                   <th>1</th>
                   <td>{book.purchase}</td>
                   <td>{book.Amount}</td>
                   <td >
-                      <button class=" mr-2 btn btn-xs btn-primary">pay</button >
-                      <button class="mr-2 btn btn-xs btn-error text-white">order cancel</button>
+                      <button className=" mr-2 btn btn-xs btn-primary">pay</button >
+                      <button className="mr-2 btn btn-xs btn-error text-white">order cancel</button>
                   </td>
                 </tr>
               ))}

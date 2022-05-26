@@ -4,7 +4,7 @@ import 'swiper/css';
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch('http://localhost:5000/review')
+    fetch('https://obscure-harbor-94819.herokuapp.com/review')
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -19,39 +19,39 @@ const Reviews = () => {
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {reviews.map((review) => (
-          <SwiperSlide>
+        {reviews.map((review,index) => (
+          <SwiperSlide key={index}>
             <img width="200px" height="150px" src={review.img} alt="" />
             <h1>{review.name}</h1>
             <p className="w-48">
             {review.description}
             </p>
-            <div class="rating rating-xs">
+            <div className="rating rating-xs">
               <input
                 type="radio"
                 name="rating-5"
-                class="mask mask-star-2 bg-orange-400"
+                className="mask mask-star-2 bg-orange-400"
               />
               <input
                 type="radio"
                 name="rating-5"
-                class="mask mask-star-2 bg-orange-400"
-                checked
+                className="mask mask-star-2 bg-orange-400"
+                
               />
               <input
                 type="radio"
                 name="rating-5"
-                class="mask mask-star-2 bg-orange-400"
+                className="mask mask-star-2 bg-orange-400"
               />
               <input
                 type="radio"
                 name="rating-5"
-                class="mask mask-star-2 bg-orange-400"
+                className="mask mask-star-2 bg-orange-400"
               />
               <input
                 type="radio"
                 name="rating-5"
-                class="mask mask-star-2 bg-orange-400"
+                className="mask mask-star-2 bg-orange-400"
               />
             </div>
           </SwiperSlide>

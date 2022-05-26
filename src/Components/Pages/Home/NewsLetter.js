@@ -8,7 +8,7 @@ const NewsLetter = () => {
                 <p>Stay connected to TOOLS HOUSE with important information and promotions.</p>
             </div>
             <div className='lg:text-right' >
-                <input type="text" placeholder="Type here" class="mr-3 input input-bordered w-full max-w-xs" />
+                <input type="text" placeholder="Type here" className="mr-3 input input-bordered w-full max-w-xs" />
                 <button className='btn btn-primary'>SUBSCRIBE</button>
             </div>
         </div>
