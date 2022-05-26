@@ -9,6 +9,7 @@ const Navbar = () => {
   const [user, loading, error] = useAuthState(auth);
   const logout = () => {
     signOut(auth);
+    localStorage.removeItem('accessToken')
   };
   return (
     <div class="navbar bg-base-100 px-12">

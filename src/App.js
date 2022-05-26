@@ -19,6 +19,7 @@ import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts';
+import AllUser from './Components/Pages/Dashboard/AllUser';
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
           <Route path="profile" element={<MyProfile/>} />
           <Route path="addreview" element={<AddReview />} />
           <Route path="manageorder" element={<ManageAllOrder />} />
+          <Route path="allUser" element={<AllUser />} />
           <Route path="addproduct" element={<AddProduct />} />
           <Route path="manageproduct" element={<ManageAllProducts />} />
         </Route>
