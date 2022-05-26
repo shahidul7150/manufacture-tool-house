@@ -20,6 +20,7 @@ import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts';
 import AllUser from './Components/Pages/Dashboard/AllUser';
+import NotFund404 from './Components/Shared/NotFund404';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/service" element={<ToolsSection />}></Route>
+        <Route path="*" element={<NotFund404/>}></Route>
       </Routes>
       <Footer />
       <ToastContainer />
