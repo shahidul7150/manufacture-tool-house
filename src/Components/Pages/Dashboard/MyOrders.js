@@ -22,7 +22,7 @@ const MyOrders = () => {
       <h1>
         Order
         {booking.length}
-        <div className="overflow-x-auto">
+        {booking.length>0? <div className="overflow-x-auto">
           <table className="table w-full">
             <thead>
               <tr>
@@ -49,6 +49,12 @@ const MyOrders = () => {
             </tbody>
           </table>
         </div>
+          :
+          <div className='text-center py-36 '>
+            <p className=' text-4xl '>Your Store is Empty</p>
+            <p>Please add a product</p>
+         </div>
+      }
       </h1>
     </div>
   );

@@ -41,7 +41,7 @@ const rating = {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
-        toast('Add product successfully');
+        toast('Add review successfully');
       });
   };
   return (
@@ -53,7 +53,7 @@ const rating = {
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
-          placeholder="Product name"
+          placeholder="Your name"
           {...register('name', { required: true })}
           className="input input-bordered w-full max-w-xs"
         />
@@ -77,7 +77,7 @@ const rating = {
         <input
           className="btn btn-primary  input input-bordered w-full max-w-xs "
           type="submit"
-          value="Add Product"
+          value="Add Review"
         />
       </form>
     </div>
