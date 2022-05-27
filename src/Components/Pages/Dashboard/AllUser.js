@@ -16,19 +16,6 @@ const AllUser = () => {
   if (isLoading) {
     return <h2>Loading...........</h2>
   }
-  // const [allUser, setAllUser] = useState([]);
-  // useEffect(() => {
-  //   fetch('http://localhost:5000/user', {
-  //     method: "GET",
-  //     headers: {
-  //       authorization:`Bearer ${localStorage.getItem('accessToken')}`
-  //     }
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => setAllUser(data));
-  // }, []);
-
-  // console.log(users)
   return (
     <div>
      {users?.length}
