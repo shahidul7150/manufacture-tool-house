@@ -21,6 +21,8 @@ import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ManageAllProducts from './Components/Pages/Dashboard/ManageAllProducts';
 import AllUser from './Components/Pages/Dashboard/AllUser';
 import NotFund404 from './Components/Shared/NotFund404';
+import RequireAdmin from './Components/Pages/Login/RequireAdmin';
+import Payment from './Components/Pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -48,8 +50,9 @@ function App() {
           <Route index element={<MyOrders />} />
           <Route path="profile" element={<MyProfile/>} />
           <Route path="addreview" element={<AddReview />} />
+          <Route path="payment/:id" element={<Payment />} />
           <Route path="manageorder" element={<ManageAllOrder />} />
-          <Route path="allUser" element={<AllUser />} />
+          <Route path="allUser" element={<RequireAdmin><AllUser /></RequireAdmin>} />
           <Route path="addproduct" element={<AddProduct />} />
           <Route path="manageproduct" element={<ManageAllProducts />} />
         </Route>

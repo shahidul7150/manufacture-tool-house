@@ -62,6 +62,7 @@ const Purchase = () => {
     const booking = {
       purchaseId: _id,
       img,
+      price,
       purchase: name,
       email: user.email,
       avatarName: user.displayName,

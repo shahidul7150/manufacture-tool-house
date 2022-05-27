@@ -1,5 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import Loading from '../../Shared/Loading';
 import UserRow from './UserRow';
 
 
@@ -7,14 +8,14 @@ const AllUser = () => {
 
 
   const { data: users, isLoading, refetch } = useQuery('users', () =>
-    fetch('http://localhost:5000/user', {
+    fetch('https://obscure-harbor-94819.herokuapp.com/user', {
     method: 'GET',
     headers: {
       authorization:`Bearer ${localStorage.getItem('accessToken')}`
     }
   }).then(res => res.json()));
   if (isLoading) {
-    return <h2>Loading...........</h2>
+    return <Loading/>
   }
   return (
     <div>
