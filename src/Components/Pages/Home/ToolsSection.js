@@ -11,7 +11,7 @@ const ToolsSection = () => {
   return (
     <div id='services'>
       <h1 className="text-center text-2xl font-bold pb-10 ">Our Tools </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 px-12 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 px-12 gap-12">
         {tools.map((tool) => (
           <Tool key={tool._id} tool={tool}></Tool>
         ))}

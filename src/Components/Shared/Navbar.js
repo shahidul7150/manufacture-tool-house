@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, NavLink, useParams } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import auth from '../../firebase.init';
 
 const Navbar = () => {
@@ -12,7 +12,7 @@ const Navbar = () => {
     localStorage.removeItem('accessToken')
   };
   return (
-    <div className="navbar bg-base-100 px-12">
+    <div className="navbar bg-base-100 px-12 lg:bg-[#3A3A3A] lg:text-white">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -72,7 +72,7 @@ const Navbar = () => {
       
         {/* <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label> */}
       </div>
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden lg:flex ">
         <ul className="menu menu-horizontal ml-44 gap-x-4">
           <li>
             <NavLink to="/" className="rounded-lg ">
@@ -86,7 +86,7 @@ const Navbar = () => {
               </NavLink>
           </li>}
           <li>
-            <NavLink to="/portfolio" className="rounded-lg ">
+            <NavLink to="/portfolio" className="rounded-lg  ]">
               My Portfolio
             </NavLink>
           </li>
@@ -103,10 +103,10 @@ const Navbar = () => {
         <div className="menu menu-horizontal " >
         {user ? (
               <div className=' menu menu-horizontal'>
-                <button onClick={logout} className='btn btn-error rounded-xl text-white mr-4'>
+                <button onClick={logout} className='btn bg-[#570DF8] rounded-xl text-white mr-4'>
                 Sign Out
               </button>
-                <p className=' bg-slate-300 text-center items-center py-3 px-3 rounded-full'>{user.displayName }</p>
+                <p className=' bg-[#570DF8] text-white text-center items-center py-3 px-3 rounded-full'>{user.displayName }</p>
               </div>
             ) : (
               <NavLink  to="/login" className="btn btn-primary rounded-lg  ">
