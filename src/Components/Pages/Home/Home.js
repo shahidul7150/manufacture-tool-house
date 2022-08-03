@@ -3,6 +3,7 @@ import Banner from './Banner';
 import BusinessSummary from './BusinessSummary';
 import NewsLetter from './NewsLetter';
 import NowAvailable from './NowAvailable';
+import Partner from './Partner';
 import Reviews from './Reviews';
 import ToolsSection from './ToolsSection';
 
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             
             <Banner />
+            <Partner/>
             <ToolsSection />
             <NowAvailable/>
             <BusinessSummary />

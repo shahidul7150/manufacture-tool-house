@@ -15,7 +15,7 @@ const Tool = ({ tool }) => {
       <div className="h-14 text-xl px-2">
         <h1 className="font-bold">
           {name}
-          <div class="badge badge-secondary ml-2">NEW</div>
+          <div class="badge badge-secondary ml-2 animate__animated animate__pulse animate__infinite	infinite">NEW</div>
         </h1>
       </div>
 
@@ -24,7 +24,7 @@ const Tool = ({ tool }) => {
       </div>
       <div className=" h-24 flex justify-between items-end p-2">
         <h1 className="font-bold flex ">
-          <small>Per Unit:</small><p className="animate__animated animate__pulse animate__infinite	infinite ml-1"> $ {price}</p>
+          <small>Per Unit:</small><p className=" ml-1"> $ {price}</p>
         </h1>
         <button
           onClick={() => navigateToPurchaseDetail(_id)}

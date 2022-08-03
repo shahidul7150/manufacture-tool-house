@@ -21,7 +21,9 @@
     "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
+    "react-slick": "^0.29.0",
     "react-toastify": "^9.0.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "^8.1.5",
     "tw-elements": "^1.0.0-alpha12",
     "web-vitals": "^2.1.4"
