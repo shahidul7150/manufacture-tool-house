@@ -9,6 +9,7 @@ import ToolsSection from './ToolsSection';
 const Home = () => {
     return (
         <div>
+            
             <Banner />
             <ToolsSection />
             <NowAvailable/>
