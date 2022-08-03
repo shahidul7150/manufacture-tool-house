@@ -14,7 +14,7 @@ export default class Partner extends Component {
       cssEase: "linear"
     };
     return (
-      <div className="pb-20">
+      <div className="pb-20  hidden lg:block">
         <h2 className="text-center text-2xl font-bold  pb-5">Our Partner</h2>
         <div>
             <hr className="hr-design"/>
