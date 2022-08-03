@@ -8,7 +8,7 @@ const Tool = ({ tool }) => {
     navigate(`/purchase/${id}`);
   };
   return (
-    <div className="h-80 border-2 border-gradient-to-r from-sky-500 to-indigo-500 my-3 rounded-md shadow-md hover:shadow-2xl">
+    <div className="h-80 px-3 pt-1 border-2 border-gradient-to-r from-sky-500 to-indigo-500 my-3 rounded-md shadow-md hover:shadow-2xl">
       <div className="max-h-28 mx-auto overflow-hidden ">
         <img width="150px" className="mx-auto " src={img} alt="" />
       </div>
@@ -19,16 +19,17 @@ const Tool = ({ tool }) => {
         </h1>
       </div>
 
-      <div className="h-10 p-2">
+      <div className="h-5 p-2">
         <p className="text-sm ">{description}</p>
       </div>
       <div className=" h-24 flex justify-between items-end p-2">
         <h1 className="font-bold flex ">
           <small>Per Unit:</small><p className=" ml-1"> $ {price}</p>
         </h1>
+        <div>
         <button
           onClick={() => navigateToPurchaseDetail(_id)}
-          className="btn btn-sm  outline-none border-0 mt-2 bg-gradient-to-r from-sky-500 to-indigo-500 text-xs hover:shadow-lg hover:shadow-sky-500"
+          className="btn btn-sm  outline-none border-0 mt-2  bg-gradient-to-r from-sky-500 to-indigo-500 text-xs hover:shadow-lg hover:shadow-sky-500"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +45,9 @@ const Tool = ({ tool }) => {
               d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
             />
           </svg>{" "}
-          Add to cart
+          
         </button>
+        </div>
       </div>
     </div>
 
