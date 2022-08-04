@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AboutUs from './Components/Pages/AboutUs/AboutUs';
 
 import Blogs from './Components/Pages/Blogs/Blogs';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
@@ -59,6 +60,7 @@ function App() {
           <Route path="manageproduct" element={<ManageAllProducts />} />
         </Route>
         <Route path="/portfolio" element={<MyPortfolio />}></Route>
+        <Route path="/about" element={<AboutUs />}></Route>
         <Route path="/blogs" element={<Blogs />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>

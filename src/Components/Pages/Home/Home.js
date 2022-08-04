@@ -9,7 +9,7 @@ import ToolsSection from './ToolsSection';
 
 const Home = () => {
     return (
-        <div>
+        <div className='max-w-fit'>
             
             <Banner />
             <Partner/>
