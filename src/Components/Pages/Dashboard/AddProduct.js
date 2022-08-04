@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
   const { register, handleSubmit } = useForm();
@@ -22,11 +22,11 @@ const AddProduct = () => {
     })
     };
   return (
-    <div className="w-2/4 mx-auto mt-3">
-      <h2 className="mb-3">Please add a product</h2>
+    <div className="w-2/4 mx-auto mt-3 bg-white shadow-xl p-5">
+      <h2 className="mb-3 text-xl text-center">Please add a product</h2>
 
       <form
-        className=" flex flex-col gap-y-3"
+        className=" flex flex-col gap-y-3 items-center"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input

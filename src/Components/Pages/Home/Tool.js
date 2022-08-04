@@ -8,7 +8,7 @@ const Tool = ({ tool }) => {
     navigate(`/purchase/${id}`);
   };
   return (
-    <div className="h-80 px-3 pt-1 border-2 border-gradient-to-r from-sky-500 to-indigo-500 my-3 rounded-md shadow-md hover:shadow-2xl">
+    <div className="h-80 px-3 pt-1 border-2 border-gradient-to-r from-sky-500 to-indigo-500 my-3 rounded-2xl shadow-md hover:shadow-2xl">
       <div className="max-h-28 mx-auto overflow-hidden ">
         <img width="150px" className="mx-auto " src={img} alt="" />
       </div>

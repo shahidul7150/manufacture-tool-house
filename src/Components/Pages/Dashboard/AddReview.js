@@ -1,9 +1,9 @@
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faStar, faStarHalf } from '@fortawesome/free-solid-svg-icons'
 import ReactStars from "react-rating-stars-component";
+import { toast } from 'react-toastify';
 const AddReview = () => {
 
 // -------------------------
@@ -45,11 +45,11 @@ const rating = {
       });
   };
   return (
-    <div className="w-2/4 mx-auto mt-3">
-      <h2 className="mb-3">Please add your review</h2>
+    <div className="w-2/4 mx-auto mt-3 bg-white shadow-xl p-5">
+      <h2 className="mb-3 text-xl text-center">Please add your review</h2>
 
       <form
-        className=" flex flex-col gap-y-3"
+        className=" flex flex-col  items-center gap-y-3"
         onSubmit={handleSubmit(onSubmit)}
       >
         <input
