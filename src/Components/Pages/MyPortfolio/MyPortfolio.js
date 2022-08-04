@@ -1,4 +1,5 @@
 import React from "react";
+import bg from "../../../assets/bg.png";
 import image from "../../../assets/code.jpg";
 const MyPortfolio = () => {
   return (
@@ -33,7 +34,7 @@ const MyPortfolio = () => {
         />
       </div>
       <h1 className="text-3xl text-center py-2 font-bold">Shahidul Islam</h1>
-      <p className="w-3/5 mx-auto bg-white p-5 rounded-xl shadow-lg">
+      <p style={{ backgroundImage:`url(${bg})`,backgroundRepeat:"no-repeat",backgroundSize:"content" }} className="w-3/5 mx-auto bg-white p-5 lg:p-10 rounded-xl shadow-lg ">
         I’m a positive and enthusiastic web developer. who has build-up a
         diverse range of skills, qualities and attributes that graduate I will
         perform highly in this role. I have mass working experience with a team
