@@ -6,7 +6,7 @@ https://tools-house.web.app/
 
 ## Website testing Criteria
 ```sh
-Email: programming@hero.com
+Email: test24@mail.com
 Password:123456
 ```
 server github code: https://github.com/shahidul7150/manufacture-tool-house-server
