@@ -53,21 +53,21 @@ const HeroAbout = () => {
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
+        src="https://i.ibb.co/g3WRm7b/hero-banner.jpg"
         class="block w-full"
         alt="Wild Landscape"
       />
     </div>
     <div class="carousel-item float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
+        src="https://i.ibb.co/m0vGDxw/hero-banner2.jpg"
         class="block w-full"
         alt="Camera"
       />
     </div>
     <div class="carousel-item float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
+        src="https://i.ibb.co/g3Ffnr6/hero-banner3.jpg"
         class="block w-full"
         alt="Exotic Fruits"
       />
